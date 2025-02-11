@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;700&display=swap");
+/* Base */
+:root {
+  --clr-primary: #18aaf4;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+ 
+}
+*{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(#111, #071a1a);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header{
+  background-image:url(image/mainpic.JPG);
+  height: 85vh;
+  background-size:100% 100%;
+  background-position: 69% ;
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  /* flex-wrap: wrap; */
+  animation: display 5s ease-in-out infinite  ;
+  
+  transition: 5s;
+}
+@keyframes display{
+  50%{
+    background-image:url(https://png.pngtree.com/thumb_back/fh260/background/20230610/pngtree-the-gym-scene-where-people-are-sitting-in-a-gym-image_2949922.jpg);
+    transition: 5s;
+  }
+  /* 66%{
+    background-image: url(https://cdn.vectorstock.com/i/500p/90/39/gym-interior-with-exercise-equipment-vector-48659039.jpg);
+    transition: 15s;
+    }  */
+  }
+  .section {
+    width: 100%;
+    padding: 40px 0;
+    overflow: hidden;
+  }
+  
+  .header::after,
+  .header::before,
+  .section::after,
+  .section::before {
+    content: "";
+    background: url(https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/blur-1.png);
+    position: absolute;
+  width: 400px;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  animation: box 5s ease-in infinite   ;
+  
+  transition: 2s;
+  transition: 0.01s;
+}
+
+
+@keyframes box{ 
+  0%{
+    transform: translateY(-800px);
+  }
+  
+}    
+
+
+
+.header::after {
+  left: -200px;
+}
+
+.header::before {
+  right: -200px;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+.mt {
+  margin-top: 20px;
+}
+
+.section {
+  background: black;
+  position: relative;
+  padding: 80px 0;
+}
+
+.section::after {
+  left: -200px;
+}
+
+.section::before {
+  width: 600px;
+  right: -200px;
+}
+
+.section:nth-child(even) {
+  background: #141615;
+}
+
+.section:nth-child(even)::after,
+.section:nth-child(even)::before {
+  display: none;
+}
+
+.primary {
+  font-size: 35px;
+  font-weight: 700;
+  color: #18aaf4;
+}
+
+
+.secondary {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.tertiary {
+  font-size: 15px;
+}
+/* End Base */
+
+/* Menu */
+.menu {
+  width: 100%;
+  background: linear-gradient(to right, #0e0e0e 70%, #142d2a);
+  padding: 12px 0;
+}
+
+.menu .container {
+  justify-content: space-between;
+}
+
+.mobile-btn {
+  display: none;
+}
+
+.logo {
+  cursor: pointer;
+  /* border-color: #18aaf4; */
+  
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  height: auto;
+  border-radius: 50%;
+  position: relative;
+  right: 70px;
+  text-align: center;
+  background-color: white;
+  margin-top: 20%;
+  border: 2px solid #18aaf4;
+}
+
+.nav {
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-item:hover a {
+  color: #18aaf4;
+  transition: 0.3s linear;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  /* text-decoration-line: overline; */
+}
+
+.nav-item:last-of-type {
+  margin-right: 0;
+}
+/* End Menu */
+
+/* Buttons */
+.btn {
+  padding: 8px 26px;
+  background: var(--clr-primary);
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: white;
+  color: var(--clr-primary);
+  transition: 0.3s linear;
+  
+}
+
+.btn-2 {
+  font-size: 35px;
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s linear;
+}
+
+.btn-2:hover {
+  background-color: white;
+  /* color: #29a396; */
+}
+
+/* End Buttons */
+
+/* Header */
+.text {
+  width: 60%;
+  margin-top:0px;
+}
+
+.visual {
+  width: 40%;
+  /* border: 4px solid white; */
+  
+}
+
+
+.visual img {
+  width: 100%;
+  /* position: relative; */
+  /* background-color: black; */
+ 
+}
+
+.header h1 {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.header h1 span {
+  color: var(--clr-primary);
+}
+/* End Header */
+
+.section:nth-child(even) .visual {
+  margin-right: 30px;
+}
+
+/* Trainer */
+#trainer {
+  text-align: center;
+}
+
+.trainer img {
+  border-top-left-radius: 80px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 20px;
+  margin-bottom: 10px;
+  /* outline: 2px solid #fff; */
+  padding: 14px;
+  transition: 0s;
+}
+.trainer img:hover{
+  transform: scale(1.2);
+  scroll-behavior: smooth;
+}
+
+
+.trainer .mb {
+  margin-bottom: 10px;
+}
+/* End Trainer */
+
+/* Testimonial */
+#testimonial .visual img {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+}
+
+.client {
+  background: #fff;
+  color: #000;
+  padding: 20px 10px;
+  margin-right: 20px;
+  text-align: center;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.client img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: calc(50% - 40px);
+}
+
+.client h2 {
+  margin: 20px 0 10px 0;
+}
+/* End Testimonial */
+
+/* Discount */
+#discount {
+  padding: 40px 0;
+}
+/* End  Discount */
+
+/* Footer */
+.footer {
+  padding: 30px 0;
+  border-top: 1px solid cornflowerblue;
+  text-align: center;
+  background-color: black;
+  
+}
+
+/* End Footer */
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mobile-btn {
+    display: block;
+    font-size: 35px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+  }
+
+  .menu.active .nav-item {
+    display: block;
+    margin: 30px 0;
+  }
+
+  .nav,
+  .menu .btn {
+    display: none;
+  }
+
+  .menu.active .nav,
+  .menu.active .btn {
+    display: block;
+  }
+
+  .menu.active {
+    padding: 30px 0;
+    width: 100%;
+    transition: all 0.8s ease;
+  }
+
+  .text,
+  .visual {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .text h1 {
+    font-size: 45px;
+  }
+
+  .primary {
+    font-size: 28px;
+  }
+
+  .secondary {
+    font-size: 22px;
+  }
+
+  .tertiary {
+    font-size: 14px;
+  }
+
+  .trainer {
+    margin-bottom: 20px;
+  }
+
+  .client {
+    margin-bottom: 50px;
+  }
+
+  #discount .visual img {
+    width: 70%;
+    margin-bottom: 30px;
+  }
+  .header{
+     /* background-image:url(image/mainpic.JPG); */
+    background-color: #29a396;
+  }
+}
+
+@media (max-width: 530px) {
+  .header::after,
+  .header::before,
+  .section::after,
+  .section::before {
+    display: none;
+  }
+
+  .primary {
+    font-size: 25px;
+  }
+
+  .secondary {
+    font-size: 20px;
+  }
+
+  .tertiary {
+    font-size: 12px;
+  }
+
+  .text h1 {
+    font-size: 34px;
+  }
+
+  .btn,
+  .btn-2 {
+    font-size: 16px;
+  }
+  .header{
+    background-image:url(image/mainpic.JPG);
+    background-size: cover;
+  }
+}
+
+/* End Responsive */
